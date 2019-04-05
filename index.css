@@ -1,0 +1,73 @@
+/* transparent selection */
+
+::selection {
+  background: rgba(255, 255, 255, 0);
+}
+
+::-moz-selection {
+  background: rgba(255, 255, 255, 0)
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+#game {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+#board {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+
+.block {
+  border: white solid 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.block:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+/* user interactions */
+
+.empty {
+  background: rgba(255, 255, 255, 0.925);
+}
+
+.flag {
+  background: rgba(255, 255, 255, 1);
+}
+
+.bomb {
+  background: #eb1e32;
+}
+
+.label-num {
+  color: #d951f4;
+}
+
+.label-str {
+  color: black;
+}
+
+.loss {
+  background: #eb1e32;
+}
+
+.win {
+  background: white;
+}
